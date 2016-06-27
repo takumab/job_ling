@@ -1,0 +1,10 @@
+<h1>Jobs</h1>
+<% @jobs.each do |job| %>
+	<h2><%= link_to job.position, job %></h2>
+	<p>Posted by <%= job.company %></p>
+	<p> Posted <%= time_ago_in_words(job.created_at) %> ago</p>
+
+<% end %>
+
+
+<%= link_to 'New Job', new_job_path %>
