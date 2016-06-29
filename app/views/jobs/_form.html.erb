@@ -4,8 +4,8 @@
       <h2><%= pluralize(@job.errors.count, "error") %> prohibited this micropost from being saved:</h2>
 
       <ul>
-      <% @job.errors.full_messages.each do |job| %>
-        <li><%= message %></li>
+      <% @job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
@@ -20,7 +20,7 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :company %><br>
+    <%= f.label 'Company Name' %><br>
     <%= f.text_field :company %>
   </div>
   <div class="actions">

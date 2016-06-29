@@ -4,6 +4,6 @@ This is a website dedicated to providing CSUN Linguistics students with jobs and
 
 Contributing:
 
-If anyone would like to contribute to this project please feel free. 
+If anyone would like to contribute to this project please feel free. 	
 
 

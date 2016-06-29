@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  
+  before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
   	@jobs = Job.all.order("created_at DESC")
@@ -10,7 +10,6 @@ class JobsController < ApplicationController
   end
 
   def show
-  	@job = Job.find(params[:id])
   end
 
   def edit
@@ -24,6 +23,19 @@ class JobsController < ApplicationController
 		else
 			render 'new'
 		end
+  end
+
+  def update
+  	@job = Job.find(params[:id])
+
+  	if @job.update(job_params)
+  		redirect_to @job
+  	else
+  		render 'edit'
+  	end
+  end
+
+  def destroy
   end
 
   private 
