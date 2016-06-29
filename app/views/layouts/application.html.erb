@@ -14,7 +14,7 @@
 			</div>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><%= link_to 'Employers/ Post Job', new_job_path %></li>
-				<li><%= link_to 'Find Jobs', root_path %></li>
+				<li><%= link_to 'Find Jobs', jobs_path %></li>
 				<li><%= link_to 'About JobLing', root_path %></li>
 				<% if user_signed_in? %>
 					<li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
