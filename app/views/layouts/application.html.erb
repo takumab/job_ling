@@ -11,7 +11,22 @@
 		<%= content_tag :div, msg, class: name %>
 	<% end %>
 
-<%= yield %>
+	<nav>
+		<div class="nav-wrapper">
+			<div class="container">
+				<%= link_to 'JobLing', root_path, class: "brand-logo" %>
+			</div>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><%= link_to 'Employers/ Post Job', new_job_path %></li>
+				<li><%= link_to 'Find Jobs', root_path %></li>
+				<li><%= link_to 'About JobLing', new_job_path %></li>
+				<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+			</ul>
+		</div>
+	</nav>
+<div class="container">
+	<%= yield %>
+</div>
 
 </body>
 </html>
