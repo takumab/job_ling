@@ -7,10 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<% flash.each do |name, msg| %>
-		<%= content_tag :div, msg, class: name %>
-	<% end %>
-
 	<nav>
 		<div class="nav-wrapper">
 			<div class="container">
@@ -19,11 +15,19 @@
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><%= link_to 'Employers/ Post Job', new_job_path %></li>
 				<li><%= link_to 'Find Jobs', root_path %></li>
-				<li><%= link_to 'About JobLing', new_job_path %></li>
-				<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+				<li><%= link_to 'About JobLing', root_path %></li>
+				<% if user_signed_in? %>
+					<li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to 'Sign in', new_user_session_path %></li>
+					<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+				<% end %>
 			</ul>
 		</div>
 	</nav>
+	<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, class: name %>
+	<% end %>
 <div class="container">
 	<%= yield %>
 </div>

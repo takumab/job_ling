@@ -4,6 +4,7 @@ class CreateJobs < ActiveRecord::Migration
       t.string :position
       t.text :description
       t.string :company
+      
 
       t.timestamps null: false
     end
