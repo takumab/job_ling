@@ -7,7 +7,7 @@
 					<div class="card-content white-text">
 						<span class="card-title"><h4><%= link_to job.position, job %></h4></span>
 						<p><%= truncate(job.description.html_safe, length: 75) %></p>
-						<p>Posted by <%= job.company %></p>
+						<p><%= job.company %> - <%= job.city %></p>
 						<p> Posted <%= time_ago_in_words(job.created_at) %> ago</p>
 					</div>
 					<div class="card-action">
