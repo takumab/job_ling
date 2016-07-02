@@ -1,13 +1,17 @@
 // Place all the styles related to the Jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$bg: #E8E8E8;
+$main-font: 'Titillium Web', sans-serif;
+$red: #990100;
+
 body {
-	background: #E8E8E8;
-	font-family: 'Titillium Web', sans-serif;
+	background: $bg;
+	font-family: $main-font;
 }
 
 .nav-wrapper {
-	background: #990100;
+	background: $red;
 }
 
 .card-title  {
