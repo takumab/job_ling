@@ -3,7 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $bg: #E8E8E8;
 $main-font: 'Titillium Web', sans-serif;
+$other-font: 'Arima+Madurai', cursive;
+$shrikhand: 'Shrikhand', cursive;
+$mogra: 'Mogra', cursive;
 $red: #990100;
+$image: "first_step.jpeg";
+
+
+@mixin background-fullsize($image) {
+    background-image:  url($image);
+    background-repeat: no-repeat;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
 
 body {
 	background: $bg;
@@ -26,3 +43,29 @@ body {
 		color: #333333;
 	}
 }
+
+/* Landing Page */
+
+#hero {
+	@include background-fullsize($image);
+	position: relative;
+	height: 100vh;
+
+
+}
+
+.header{
+  position:absolute;
+  top:50%;
+  text-align:center;
+  width:100%;
+  color:#fff;
+  font-size:65px;
+  -ms-transform: translate(0,-50%); /* IE 9 */
+    -webkit-transform: translate(0,-50%); /* Safari */
+    transform: translate(0,-50%);
+   font-family: $shrikhand; 
+
+
+}
+
