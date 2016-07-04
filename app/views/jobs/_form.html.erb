@@ -11,12 +11,9 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="input-field">
-    <select multiple>
-      <option><%= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a category" }, value: 1 %></option>
-    </select>
-    
+      <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"} %>
   </div>
   
   <div class="input-field">
