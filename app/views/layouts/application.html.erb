@@ -17,11 +17,11 @@
 					<%= link_to 'Matador LingO', pages_landing_page_path, class: "brand-logo" %>
 				</div>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li>
+
 						<% Category.all.each do |category| %>
-							<%= link_to category.name, jobs_path(category: category.name) %>
+							<li><%= link_to category.name, jobs_path(category: category.name) %></li>
 						<% end %>
-					</li>
+
 					<li><%= link_to 'Employers/ Post Job', new_job_path %></li>
 					<li><%= link_to 'Jobs', jobs_path %></li>
 					<li><%= link_to 'About', pages_about_path %></li>
