@@ -1,4 +1,4 @@
-class Job < ActiveRecord::Base
+class Job < ApplicationRecord
 belongs_to :category
 	validates :position, presence: true
 		validates :description, presence: true

@@ -7,6 +7,7 @@
 
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Titillium+Web|Mogra|Shrikhand" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
 </head>
 <body>
 	<div class="navbar-fixed">
@@ -33,13 +34,13 @@
 				</ul>
 			</div>
 		</nav>
-	</div>	
+	</div>
 	<div class="container">
 		<% flash.each do |name, msg| %>
 		<%= content_tag :div, msg, class: name %>
 	<% end %>
 	</div>
-	
+
 <div class="">
 	<%= yield %>
 </div>

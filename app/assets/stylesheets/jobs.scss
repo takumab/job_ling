@@ -8,15 +8,15 @@ $shrikhand: 'Shrikhand', cursive;
 $mogra: 'Mogra', cursive;
 $red: #990100;
 $image: "first_step.jpeg";
+$transparent: transparent;
 
 
 @mixin background-fullsize($image) {
     background-image:  url($image);
     background-repeat: no-repeat;
-    
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 
 }
@@ -64,8 +64,7 @@ body {
   -ms-transform: translate(0,-50%); /* IE 9 */
     -webkit-transform: translate(0,-50%); /* Safari */
     transform: translate(0,-50%);
-   font-family: $shrikhand; 
+   font-family: $shrikhand;
 
 
 }
-
